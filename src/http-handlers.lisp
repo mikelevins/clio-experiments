@@ -11,9 +11,9 @@
       (:meta :charset "utf-8")
       (:meta :http-equiv "X-UA-Compatible" :content "IE=edge")
       (:meta :name "viewport" :content "width=device-width, initial-scale=1")
-      (:title "clio"))
+      (:title "Stage"))
      (:body
       (:div
        (:h1 "Stage")
-       (:p "Steps toward a presentation server for Lisp programs"))))
+       (:p "clio's presentation process"))))
     out))

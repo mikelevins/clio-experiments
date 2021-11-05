@@ -29,12 +29,12 @@
     :components ((:module "src"
                           :serial t
                           :components ((:file "package")
-                                       (:file "http")
-                                       (:file "director")))))
+                                       (:file "http-server")
+                                       (:file "http-handlers")
+                                       (:file "stage")))))
 
 #+nil (asdf:load-system :clio)
 
-#+nil (clio::start-director)
-#+nil (clio::stop-director)
-
-
+#+nil (clio::start-http)
+#+nil (clio::start-stage)
+#+nil (clio::stop-http)
