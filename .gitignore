@@ -4,3 +4,4 @@
 /stage/stage
 *.exe
 *.obj
+/stage/macos/stage
