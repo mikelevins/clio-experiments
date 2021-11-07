@@ -6,6 +6,9 @@
 #+darwin
 (defparameter *stage-executable-path* (asdf:system-relative-pathname :clio "stage/macos/stage"))
 
+#+linux
+(defparameter *stage-executable-path* (asdf:system-relative-pathname :clio "stage/linux/stage"))
+
 (defparameter *stage-process* nil)
 
 (defun start-stage ()

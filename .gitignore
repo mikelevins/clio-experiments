@@ -1,7 +1,8 @@
 *~
 /c/testwv
 /testwv/testwv
-/stage/stage
 *.exe
 *.obj
+/stage/linux/stage
 /stage/macos/stage
+/stage/windows/stage.exe
