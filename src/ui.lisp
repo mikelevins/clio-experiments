@@ -6,6 +6,8 @@
 
 (defun on-new-window (body)
   (create-div body :content "Clio")
+  (create-div body :content (format nil "body: ~A"
+                                    (with-output-to-string (out) (describe body out))))
   (run body))
 
 (defun start ()
