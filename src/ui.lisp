@@ -7,8 +7,7 @@
 (defun on-new-window (body)
   (js-execute
    (html-document body)
-   (format nil "var myCodeMirror = CodeMirror(document.body, {mode: 'commonlisp', keyMap: 'emacs'});"))
-  )
+   (format nil "var TheCodeMirror = CodeMirror(document.body, {mode: 'commonlisp', keyMap: 'emacs', lineNumbers: true});")))
 
 (defun start ()
   (initialize #'on-new-window :static-root #P"www/")
