@@ -1,20 +1,11 @@
 (in-package :clio)
 
-#+os-windows
-(eval-when (:compile-toplevel :load-toplevel :execute)
-  (setf trivial-open-browser::+format-string+ "start msedge ~S"))
+(defparameter +open-browser-command+
+  #+(or win32 mswindows windows) "start msedge ~S"
+  #+(or macos darwin) "open ~S"
+  #-(or win32 mswindows macos darwin windows) "xdg-open ~S")
 
-(defun on-new-window (body)
-  (js-execute
-   (html-document body)
-   (format nil "
-var worksheet = document.getElementById('worksheet');
-var output = document.getElementById('output');
-var TheCodeMirror = CodeMirror(worksheet, {mode: 'commonlisp', keyMap: 'emacs', lineNumbers: true});
-")))
+(defun open-browser (url)
+  (uiop:run-program (format nil +open-browser-command+ url)))
 
-(defun start ()
-  (initialize #'on-new-window :static-root #P"www/")
-  (open-browser))
-
-#+nil (start)
+#+nil (open-browser "http://apple.com")

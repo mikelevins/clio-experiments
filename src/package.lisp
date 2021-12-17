@@ -11,6 +11,6 @@
 (in-package :cl-user)
 
 (defpackage :clio
-  (:use :cl :clog)
+  (:use :cl)
   (:export start))
 
