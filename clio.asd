@@ -16,6 +16,10 @@
 ;;; clio
 ;;; ---------------------------------------------------------------------
 
+;;; make sure we load hunchentoot at the start with
+;;; :hunchentoot-no-ssl on *features*, so that we don't run into
+;;; problems loading cl+ssl
+
 (eval-when (:compile-toplevel :load-toplevel :execute)
   (pushnew :HUNCHENTOOT-NO-SSL *features*))
 
@@ -25,7 +29,7 @@
   :author "mikel evins <mevins@me.com>"
   :license "Apache 2.0"
   :version "0.4.1"
-  :depends-on (:hunchentoot :trivial-ws :cl-who)
+  :depends-on (:hunchentoot :trivial-ws :parenscript :st-json :cl-who)
   :components ((:module "src"
                 :serial t
                 :components ((:file "package")
