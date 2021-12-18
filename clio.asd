@@ -29,7 +29,7 @@
   :author "mikel evins <mevins@me.com>"
   :license "Apache 2.0"
   :version "0.4.1"
-  :depends-on (:hunchentoot :trivial-ws :parenscript :st-json :cl-who)
+  :depends-on (:hunchentoot :trivial-ws :parenscript :st-json :cl-who :lass)
   :components ((:module "src"
                 :serial t
                 :components ((:file "package")
