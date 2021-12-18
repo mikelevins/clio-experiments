@@ -12,7 +12,7 @@
       (:meta :http-equiv "X-UA-Compatible" :content "IE=edge")
       (:meta :name "viewport" :content "width=device-width, initial-scale=1")
       (:title "Stage"))
-     (:body
+     (:body :style "background:#eee;"
       (:div
        (:h1 "Stage")
        (:p "clio's presentation process"))))
