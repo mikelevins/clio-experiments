@@ -8,4 +8,4 @@
 (defun open-browser (url)
   (uiop:run-program (format nil +open-browser-command+ url)))
 
-#+nil (open-browser "http://apple.com")
+#+nil (open-browser "http://wikipedia.com")
