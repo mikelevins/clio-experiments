@@ -20,8 +20,11 @@
       (:link :rel "icon":type "image/png" :href "clio-icon.png")
       (:title "clio"))
      (:body
-      ;; required Javascript
+      ;; preloaded Javascript
       (:script :src "js/htmx.min.js")
+      (:script :src "js/clio.js")
+
+      ;; actual contents
       (:div :class "content"
             (:h2 "clio"))))
     (values)))

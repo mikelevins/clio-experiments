@@ -11,6 +11,6 @@
 (in-package :cl-user)
 
 (defpackage :clio
-  (:use :cl :cl-who)
+  (:use :cl :cl-who :parenscript)
   (:export start))
 
