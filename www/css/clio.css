@@ -4,7 +4,9 @@
     width: 100%;
 }
 
-body { font-family: "Garamond", serif; }
+body {
+    font-family: "Garamond", serif;
+}
 
 #listener {
     border: 1px solid Gainsboro;
@@ -12,9 +14,13 @@ body { font-family: "Garamond", serif; }
     width: 100%;
 }
 
-#listener-input { width: calc(100% - 12rem); }
-#listener-submit { margin-left: 1rem; }
+#listener-input {
+    font-family: "Courier New", monospace;
+    width: calc(100% - 12rem);
+}
 
 #prompt { font-family: "Courier New", monospace; }
 
-#worksheet {}
+#worksheet {
+    padding: 0.25rem;
+}

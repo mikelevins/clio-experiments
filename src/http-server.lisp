@@ -20,7 +20,7 @@
   (hunchentoot:start *http-server*)
   (setf *websocket-handler* (trivial-ws:start *websocket-server* *websocket-port*)))
 
-#+nil (trivial-ws:send (first (trivial-ws:clients clio::*websocket-server*)) "{\"name\": \"Hello!\"}")
+#+nil (trivial-ws:send (first (trivial-ws:clients clio::*websocket-server*)) "{\"name\": \"Goodbye!\"}")
 
 (defun stop-server ()
   (trivial-ws:stop *websocket-handler*)
