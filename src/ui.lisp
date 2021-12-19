@@ -26,5 +26,11 @@
 
       ;; actual contents
       (:div :class "content"
-            (:h2 "clio"))))
+            (:div :id "banner" "clio")
+            (:div :id "worksheet")
+            (:div :id "listener"
+                  (:form
+                   (:span :id "prompt" "clio>&nbsp;")
+                   (:input :id "listener-input" :type "text")
+                   (:input :id "listener-submit" :type "submit" :value "Evaluate"))))))
     (values)))

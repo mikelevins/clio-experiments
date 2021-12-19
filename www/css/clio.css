@@ -1,0 +1,20 @@
+#banner {
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    width: 100%;
+}
+
+body { font-family: "Garamond", serif; }
+
+#listener {
+    border: 1px solid Gainsboro;
+    padding: 0.25rem;
+    width: 100%;
+}
+
+#listener-input { width: calc(100% - 12rem); }
+#listener-submit { margin-left: 1rem; }
+
+#prompt { font-family: "Courier New", monospace; }
+
+#worksheet {}
