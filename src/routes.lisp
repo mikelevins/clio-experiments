@@ -1,16 +1,15 @@
 ;;;; ***********************************************************************
 ;;;;
-;;;; Name:          package.lisp
+;;;; Name:          routes.lisp
 ;;;; Project:       clio
-;;;; Purpose:       package definitions
+;;;; Purpose:       HTTP API endpoints
 ;;;; Author:        mikel evins
 ;;;; Copyright:     2021 by mikel evins
 ;;;;
 ;;;; ***********************************************************************
 
-(in-package :cl-user)
+(in-package :clio)
 
-(defpackage :clio
-  (:use :cl :cl-who)
-  (:export start))
-
+(hunchentoot:define-easy-handler (landing :uri "/") ()
+  (setf (hunchentoot:content-type*) "text/html")
+  (landing-page))

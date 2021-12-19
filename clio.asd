@@ -33,6 +33,17 @@
   :components ((:module "src"
                 :serial t
                 :components ((:file "package")
-                             (:file "ui")))))
+                             (:file "parameters")
+                             (:file "http-server")
+                             (:file "routes")
+                             (:file "ui")
+                             (:file "browser")))))
 
 #+nil (asdf:load-system :clio)
+
+;;; ---------------------------------------------------------------------
+;;; server
+;;; ---------------------------------------------------------------------
+
+#+nil (clio::start-server 8000)
+#+nil (clio::stop-server)
