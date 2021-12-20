@@ -1,5 +1,7 @@
 #banner {
+    background: WhiteSmoke;
     font-size: 1.25rem;
+    font-style: italic;
     padding: 0.25rem;
     width: 100%;
 }
