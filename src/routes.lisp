@@ -16,7 +16,8 @@
 
 (hunchentoot:define-easy-handler (evaluate :uri "/evaluate") (listener-input)
   (setf (hunchentoot:content-type*) "text/html")
-  (let ((vals (multiple-value-list (eval (read-from-string listener-input)))))
+  (let* ((vals (multiple-value-list (eval (read-from-string listener-input))))
+         (val-strings (mapcar (lambda (v) (with-output-to-string (out) (prin1 v out))) vals)))
     (with-html-output-to-string (s)
-      (loop for val in vals
+      (loop for val in val-strings
             do (htm (:p (:pre (str val))))))))
