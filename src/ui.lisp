@@ -29,7 +29,7 @@
             (:div :id "banner" "clio")
             (:div :id "worksheet")
             (:div :id "listener"
-                  (:form :hx-post "/evaluate" :hx-target "#worksheet" :hx-swap "innerHTML"
-                   (:span :id "prompt" "clio>&nbsp;")
-                   (:input :id "listener-input" :name "listener-input" :type "text"))))))
+                  (:form :hx-post "/evaluate" :hx-target "#worksheet" :hx-swap "beforeend"
+                         (:span :id "prompt" "clio>&nbsp;")
+                         (:input :id "listener-input" :name "listener-input" :type "text"))))))
     (values)))

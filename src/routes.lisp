@@ -20,4 +20,4 @@
          (val-strings (mapcar (lambda (v) (with-output-to-string (out) (prin1 v out))) vals)))
     (with-html-output-to-string (s)
       (loop for val in val-strings
-            do (htm (:p (:pre (str val))))))))
+            do (htm (:div (:pre (str (hunchentoot:escape-for-html val)))))))))
