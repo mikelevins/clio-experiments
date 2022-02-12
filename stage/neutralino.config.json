@@ -1,6 +1,6 @@
 {
-  "applicationId": "js.neutralino.sample",
-  "version": "1.0.0",
+  "applicationId": "net.bardcode.clio",
+  "version": "0.0.1",
   "defaultMode": "window",
   "port": 0,
   "documentRoot": "/resources/",
@@ -30,7 +30,7 @@
   },
   "modes": {
     "window": {
-      "title": "stage",
+      "title": "Clio",
       "width": 800,
       "height": 500,
       "minWidth": 400,
