@@ -1,4 +1,3 @@
-
 function showInfo() {
     document.getElementById('info').innerHTML = `
         ${NL_APPID} running on port: ${NL_PORT} on ${NL_OS}
