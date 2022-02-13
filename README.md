@@ -1,4 +1,3 @@
-# Clio
+# Clio experiments
 
-Clio is an embryonic experiment in UI for Common Lisp programs.
-
+TInkering with ways to present a GUI for Lisp programs using web technologies.
